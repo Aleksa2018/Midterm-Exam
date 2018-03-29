@@ -14,12 +14,24 @@
 ===================================================
 """
 
-# Write your function here
+
+def convert_2_upper(recenica):
+    g = ""
+    for ch in recenica:
+        if ord(ch) >= 65 and ord(ch) <= 90:
+            x = ord(ch) + 32
+            y = chr(x)
+            g = g + y
+    return g
 
 
 
 def main():
-    # Test your function here
+    recenica = input('Enter here: ')
+    print(convert_2_upper(recenica))
+
+    g = ""
+
     pass
 
 main()
