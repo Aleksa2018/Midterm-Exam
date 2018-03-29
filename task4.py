@@ -18,8 +18,8 @@
 def convert_2_upper(recenica):
     g = ""
     for ch in recenica:
-        if ord(ch) >= 65 and ord(ch) <= 90:
-            x = ord(ch) + 32
+        if ord(ch) >= 97 and ord(ch) <= 122:
+            x = ord(ch) - 32
             y = chr(x)
             g = g + y
     return g
