@@ -1,5 +1,5 @@
 # Midterm-Exam
 
-##### Name:
-##### Surname:
-##### Index #:
+##### Name: Aleksa
+##### Surname: Bigovic
+##### Index #: 17/070e
