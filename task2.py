@@ -12,4 +12,17 @@
 ===================================================
 """
 
-# Write your code here
+
+def product_x(num):
+    x=10
+    while True:
+        print (x)
+        y=[int(a) for a in str(x)]
+        product = 1
+        for z in y:
+            product*=z
+        if product == num:
+            return x
+        else:
+            x+=1
+print(product_x(10))
