@@ -16,14 +16,23 @@
 ===================================================
 """
 
-# Write your function here
 
+
+import math
+
+def area_of_circle(r):
+
+    if not isinstance(r, float) and not isinstance(r, int): # unijeti broj mora biti cijeli ili decimalni, pa to ispitujemo,
+        return -1                                           # a ako nije vratice -1
+
+    return (abs(r)**2)*math.pi  #f-ja vraca povrsinu kruga datog poluprecnika
 
 
 def main():
-    from math import pi
-    r = float(input("Input the radius of the circle : "))
-    print("The area of the circle with radius " + str(r) + " is: " + str(pi * r ** 2))
+
+    povrsina = area_of_circle(-2.3)
+    print(povrsina)
+
     pass
 
 main()

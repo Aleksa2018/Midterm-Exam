@@ -16,38 +16,22 @@
 ===================================================
 """
 
-def is_even(number):
+n = int(input("Koliko brojeva unosite? "))# da bi znali kolika ce biti duzina liste(mora biti cijeli broj)
 
-    if number % 2 == 0:
-        return True
-    else:
-        return False
+lista = [] # na pocetku je data prazna lista
 
+nenegativni = negativni = 0
 
+for i in range(n):  # koliko lista ima clanova, toliko cemo puta pitati korisnika da unese novi clan liste
+    novi_broj = int(input("Unesite "+ str(i+1)+ ".broj: ")) # stringovi mogu da se spoje sabiranjem
+    lista.append(novi_broj) # svaki od unijetih brojeva dodajemo u listu
 
-list_length = int(input("How many numbers should list have? "))
+    if novi_broj < 0: # ako je unijeti broj manji od nule, ukupan broj negativnih se uveca za 1
+        negativni += 1
 
+    else:             # u suprotnom se uveca broj nenegativnih za 1
+        nenegativni += 1
 
-
-list_of_numbers = []
-
-
-for i in range(list_length):
-    new_number = int(input("Enter integer number #" + str(i+1) + ": "))
-    list_of_numbers.append(new_number)  # Add new number to the list
-
-
-total_even = total_odd = 0
-
-for number in list_of_numbers:
-
-
-    if is_even(number):
-        total_even += 1
-    else:
-        total_odd += 1
-
-
-print("List of numbers: ", str(list_of_numbers))
-print("Total even numbers: ", total_even)
-print("Total odd numbers: ", total_odd)
+print("Vasa lista: ", str(lista))
+print("Nenegativnih brojeva u listi ima: ", nenegativni)
+print("Negativnih brojeva u listi ima: ", negativni)
